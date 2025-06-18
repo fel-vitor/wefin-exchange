@@ -6,6 +6,7 @@ import {
   provideExperimentalZonelessChangeDetection,
 } from '@angular/core';
 import { provideRouter, withComponentInputBinding } from '@angular/router';
+import { providePrimeNgConfig } from '@core/config/primeng.config';
 import { routes } from './app.routes';
 
 export const appConfig: ApplicationConfig = {
@@ -13,6 +14,7 @@ export const appConfig: ApplicationConfig = {
     provideExperimentalZonelessChangeDetection(),
     provideRouter(routes, withComponentInputBinding()),
     provideHttpClient(),
+    providePrimeNgConfig(),
     { provide: DEFAULT_CURRENCY_CODE, useValue: 'BRL' },
     { provide: LOCALE_ID, useValue: 'pt' },
   ],
