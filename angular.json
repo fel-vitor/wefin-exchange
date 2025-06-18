@@ -31,7 +31,11 @@
               },
               "src/assets"
             ],
-            "styles": ["primeicons/primeicons.css", "src/styles.scss"],
+            "styles": [
+              "primeicons/primeicons.css",
+              "primeflex/primeflex.css",
+              "src/styles.scss"
+            ],
             "scripts": []
           },
           "configurations": {
