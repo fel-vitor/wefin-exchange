@@ -4,9 +4,6 @@ import { RouterOutlet } from '@angular/router';
 @Component({
   selector: 'wefin-root',
   imports: [RouterOutlet],
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.scss'
+  template: '<router-outlet />'
 })
-export class AppComponent {
-  title = 'wefin-exchange';
-}
+export class AppComponent {}
