@@ -1,9 +1,4 @@
-import {
-  ChangeDetectionStrategy,
-  Component,
-  input,
-  output,
-} from '@angular/core';
+import { ChangeDetectionStrategy, Component, input } from '@angular/core';
 import type { TabSwitchComponent } from '@shared/components/molecules/tab-switch/tab-switch.component';
 
 @Component({
@@ -16,8 +11,6 @@ export class FakeTabSwitchComponent implements TabSwitchComponent {
   public firstRoute = input.required<string>();
   public secondLabel = input.required<string>();
   public secondRoute = input.required<string>();
-
-  public changed = output<string>();
 
   public onTabClick(): void {}
 }

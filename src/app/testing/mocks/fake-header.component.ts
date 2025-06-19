@@ -6,6 +6,4 @@ import { HeaderComponent } from '@shared/components/organisms/header/header.comp
   template: '',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class FakeHeaderComponent extends HeaderComponent {
-  public override navigateRoute(route: string): void {}
-}
+export class FakeHeaderComponent implements HeaderComponent {}
