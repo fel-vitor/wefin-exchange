@@ -7,12 +7,12 @@ import {
 } from '@angular/core';
 import { provideRouter, withComponentInputBinding } from '@angular/router';
 import { providePrimeNgConfig } from '@core/config/primeng.config';
-import { routes } from './app.routes';
+import { APP_ROUTES } from './app.routes';
 
 export const appConfig: ApplicationConfig = {
   providers: [
     provideExperimentalZonelessChangeDetection(),
-    provideRouter(routes, withComponentInputBinding()),
+    provideRouter(APP_ROUTES, withComponentInputBinding()),
     provideHttpClient(),
     providePrimeNgConfig(),
     { provide: DEFAULT_CURRENCY_CODE, useValue: 'BRL' },
