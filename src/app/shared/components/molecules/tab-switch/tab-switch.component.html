@@ -1,0 +1,21 @@
+<div class="flex surface-300 text-sm font-medium p-2 border-round-md font-normal align-items-center">
+  <a
+    [routerLink]="firstRoute()"
+    routerLinkActive="bg-primary"
+    [routerLinkActiveOptions]="{ exact: true }"
+    class="text-700 border-round-left-md p-2 no-underline"
+    data-testid="link-first"
+  >
+    {{ firstLabel() }}
+  </a>
+
+  <a 
+    [routerLink]="secondRoute()"
+    routerLinkActive="bg-primary"
+    [routerLinkActiveOptions]="{ exact: true }"
+    class="text-700 border-round-right-md p-2 no-underline"
+    data-testid="link-second"
+  >
+    {{ secondLabel() }}
+  </a>
+</div>
