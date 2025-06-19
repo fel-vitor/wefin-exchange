@@ -9,11 +9,15 @@ body {
   margin: 0;
   height: 100dvh;
   overflow: auto;
-  background-color: var(--p-green-500);
+  background-color: var(--p-green-100);
 }
 
 * {
   font-family: "Roboto", sans-serif;
   box-sizing: border-box;
   outline: none;
+}
+
+.max-width-content-page {
+  max-width: 50rem;
 }

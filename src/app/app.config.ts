@@ -1,4 +1,6 @@
+import { registerLocaleData } from '@angular/common';
 import { provideHttpClient } from '@angular/common/http';
+import localePt from '@angular/common/locales/pt';
 import {
   type ApplicationConfig,
   DEFAULT_CURRENCY_CODE,
@@ -8,6 +10,8 @@ import {
 import { provideRouter, withComponentInputBinding } from '@angular/router';
 import { providePrimeNgConfig } from '@core/config/primeng.config';
 import { APP_ROUTES } from './app.routes';
+
+registerLocaleData(localePt);
 
 export const appConfig: ApplicationConfig = {
   providers: [
