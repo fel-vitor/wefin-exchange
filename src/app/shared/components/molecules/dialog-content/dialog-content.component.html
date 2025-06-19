@@ -3,8 +3,8 @@
   <header class="dialog-content-header" data-testid="header-dialog-content">
     <ng-content select="[header]" />
     @if (showCloseButton()) {
-      <div class="flex flex-1 justify-content-end">
-        <button pButton icon="pi pi-times" [rounded]="true" severity="danger" [outlined]="true" (click)="closeDialog()" data-testid="button-close-action">
+      <div class="mt-2 flex flex-1 justify-content-end">
+        <button pButton icon="pi pi-times" [rounded]="true" [text]="true" severity="danger" (click)="closeDialog()" data-testid="button-close-action">
         </button>
       </div>
     }
