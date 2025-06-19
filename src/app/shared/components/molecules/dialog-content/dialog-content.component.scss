@@ -1,0 +1,13 @@
+.dialog-content-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  user-select: none;
+  height: 56px;
+  padding: 16px 24px;
+}
+
+.dialog-content-container {
+  height: 100%;
+  overflow: auto;
+}
