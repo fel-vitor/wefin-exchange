@@ -12,4 +12,5 @@ import { SelectModule } from 'primeng/select';
 export class InputSelectComponent<T> extends ControlValueAccessorDirective<T> {
   public options = input<T[]>([]);
   public optionLabel = input.required<string>();
+  public optionValue = input<string>();
 }
