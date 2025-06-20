@@ -1,59 +1,142 @@
-# WefinExchange
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.15.
+# Wefin Exchange
 
-## Development server
+Projeto desenvolvido em Angular 19 para controle de taxas de câmbio e operações relacionadas. Este projeto faz parte de um desafio técnico da empresa **Wefin**.
 
-To start a local development server, run:
+## 📜 Descrição
 
-```bash
-ng serve
-```
+Aplicação web que permite visualizar, editar e gerenciar taxas de câmbio. Possui uma interface intuitiva, construída com Angular e PrimeNG, além de utilizar Jest para testes e Biome para formatação e lint.
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+---
 
-## Code scaffolding
+## 🚀 Tecnologias Utilizadas
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+- **Angular 19**
+- **PrimeNG 19**
+- **PrimeIcons**
+- **PrimeFlex**
+- **RxJS**
+- **TypeScript 5**
+- **Jest** (testes unitários)
+- **BiomeJS** (formatador e linter)
+- **JSON Server** (Mock de API)
 
-```bash
-ng generate component component-name
-```
+---
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+## 🔧 Pré-requisitos
 
-```bash
-ng generate --help
-```
+- **Node.js** versão `>=18.x` (recomendado)
+- **Angular CLI** versão `^19.2.15` (ou superior)
 
-## Building
+---
 
-To build the project run:
+## ⚙️ Instalação e Execução Local
 
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+1. Clone o repositório:
 
 ```bash
-ng test
+git clone git@github.com:fel-vitor/wefin-exchange.git
 ```
 
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
+2. Instale as dependências:
 
 ```bash
-ng e2e
+npm install
 ```
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+3. Rode o projeto localmente:
 
-## Additional Resources
+```bash
+npm start
+```
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+> Isso executará dois serviços em paralelo:
+> - `ng serve` (servidor Angular)
+> - `json-server` com a API fake (`json-server/db.json`)
+
+O projeto estará disponível em: [http://localhost:4200](http://localhost:4200)
+
+---
+
+## 🧪 Rodando Testes
+
+Execute os testes unitários com:
+
+```bash
+npm run test
+```
+
+> Framework de testes: **Jest** com configuração otimizada para Angular.
+
+---
+
+## 🏗️ Build para Produção
+
+Gere o build otimizado para produção com:
+
+```bash
+npm run build
+```
+
+Os arquivos serão gerados na pasta:
+
+```
+dist/wefin-exchange
+```
+
+---
+
+## 📝 Scripts Disponíveis
+
+| Comando                     | Descrição                                      |
+|-----------------------------|-------------------------------------------------|
+| `npm start`                 | Executa o app + json-server                    |
+| `npm run start:app`         | Executa somente o Angular                      |
+| `npm run start:json-server` | Executa somente o JSON Server                  |
+| `npm run test`              | Roda os testes unitários com Jest              |
+| `npm run build`             | Gera o build de produção                       |
+| `npm run format`            | Formata o código com Biome                     |
+| `npm run lint`              | Faz lint do projeto com Biome                  |
+
+---
+
+## 🏗️ Configurações Especiais
+
+- O projeto utiliza **Proxy** (`proxy.config.json`) para redirecionar chamadas HTTP durante desenvolvimento.
+- As variáveis de ambiente estão nos arquivos padrão Angular:
+  - `src/environments/environment.ts`
+  - `src/environments/environment.prod.ts`
+- Utiliza **Change Detection Strategy OnPush** por padrão nos componentes para melhorar a performance.
+
+---
+
+## 🤝 Contribuição
+
+Este projeto foi desenvolvido exclusivamente para avaliação técnica e **não aceita contribuições externas** no momento.
+
+---
+
+## ⚖️ Licença
+
+Este projeto é de uso interno para fins de avaliação técnica da empresa **Wefin**.
+
+---
+
+## 💡 Observações
+
+- Caso tenha problemas com permissões ou versões, atualize suas dependências ou reinstale o Angular CLI:
+
+```bash
+npm install -g @angular/cli
+```
+
+- O projeto está organizado seguindo boas práticas de arquitetura Angular, utilizando divisão clara entre `core`, `shared` e `pages`.
+
+---
+
+## 📫 Contato
+
+Desenvolvido por **Vitor Fel** como parte do desafio para **Wefin**.  
+📧 Email: vitorfel2000@gmail.com
+
+---
