@@ -4,6 +4,7 @@ import {
   provideHttpClientTesting,
 } from '@angular/common/http/testing';
 import { fakeAsync, TestBed, tick } from '@angular/core/testing';
+import { CurrencyEnum } from '@shared/enum/currency-type.enum';
 import type {
   TransactionInterface,
   TransactionWithoutIdInterface,
@@ -38,22 +39,24 @@ describe('TransactionsService', () => {
     const fakeTransactions: TransactionInterface[] = [
       {
         id: 'TXN-001',
-        fromCurrency: 'OURO_REAL',
-        toCurrency: 'TIBAR',
+        fromCurrency: CurrencyEnum.OuroReal,
+        toCurrency: CurrencyEnum.Tibar,
         fromAmount: 100,
         toAmount: 250,
         exchangeRate: 2.5,
         timestamp: '2024-06-18T09:30:00Z',
+        date: '2024-06-18',
         status: 'COMPLETED',
       },
       {
         id: 'TXN-002',
-        fromCurrency: 'TIBAR',
-        toCurrency: 'OURO_REAL',
+        fromCurrency: CurrencyEnum.Tibar,
+        toCurrency: CurrencyEnum.OuroReal,
         fromAmount: 500,
         toAmount: 200,
         exchangeRate: 0.4,
         timestamp: '2024-06-18T08:15:00Z',
+        date: '2024-06-18',
         status: 'COMPLETED',
       },
     ];
@@ -68,12 +71,13 @@ describe('TransactionsService', () => {
   it('getById() deve retornar uma transação', fakeAsync(() => {
     const fakeTransactions: TransactionInterface = {
       id: 'TXN-001',
-      fromCurrency: 'OURO_REAL',
-      toCurrency: 'TIBAR',
+      fromCurrency: CurrencyEnum.OuroReal,
+      toCurrency: CurrencyEnum.Tibar,
       fromAmount: 100,
       toAmount: 250,
       exchangeRate: 2.5,
       timestamp: '2024-06-18T09:30:00Z',
+      date: '2024-06-18',
       status: 'COMPLETED',
     };
 
@@ -101,12 +105,13 @@ describe('TransactionsService', () => {
 
   it('post() deve criar uma transação', fakeAsync(() => {
     const fakeTransaction: TransactionWithoutIdInterface = {
-      fromCurrency: 'OURO_REAL',
-      toCurrency: 'TIBAR',
+      fromCurrency: CurrencyEnum.OuroReal,
+      toCurrency: CurrencyEnum.Tibar,
       fromAmount: 100,
       toAmount: 250,
       exchangeRate: 2.5,
       timestamp: '2024-06-18T09:30:00Z',
+      date: '2024-06-18',
       status: 'COMPLETED',
     };
 

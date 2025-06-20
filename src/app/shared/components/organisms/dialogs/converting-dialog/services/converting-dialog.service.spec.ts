@@ -43,6 +43,7 @@ describe('ConvertingDialogService', () => {
       toAmount: 250,
       exchangeRate: 2.5,
       timestamp: '2025-06-20T00:00:00Z',
+      date: '2025-06-20',
       status: 'COMPLETED',
     };
 

@@ -21,6 +21,7 @@ describe('ConvertingDialogComponent', () => {
     toAmount: 250,
     exchangeRate: 2.5,
     timestamp: '2025-06-20T00:00:00Z',
+    date: '2025-06-20T00',
     status: 'COMPLETED',
   };
 
@@ -93,6 +94,7 @@ describe('ConvertingDialogComponent', () => {
       toAmount: 250,
       exchangeRate: 2.5,
       timestamp: expect.any(String),
+      date: expect.any(String),
       status: 'COMPLETED',
     });
   });
