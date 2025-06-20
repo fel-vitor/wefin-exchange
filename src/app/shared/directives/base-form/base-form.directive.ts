@@ -11,7 +11,7 @@ import { MessageService } from 'primeng/api';
 export abstract class BaseFormDirective {
   private _messageService = inject(MessageService);
 
-  protected model!: UntypedFormGroup;
+  public model!: UntypedFormGroup;
 
   abstract submit(_params?: unknown): void;
 

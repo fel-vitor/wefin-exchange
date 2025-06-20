@@ -4,6 +4,7 @@ import {
   provideHttpClientTesting,
 } from '@angular/common/http/testing';
 import { fakeAsync, TestBed, tick } from '@angular/core/testing';
+import { CurrencyEnum } from '@shared/enum/currency-type.enum';
 import type { CurrencyRateInterface } from '@shared/interfaces/currency.model';
 import { CurrencyRateService } from './currency-rate.service';
 
@@ -32,15 +33,15 @@ describe('CurrencyRateService', () => {
     const fakefakeCurrencyRate: CurrencyRateInterface[] = [
       {
         id: '1',
-        fromCurrency: 'OURO_REAL',
-        toCurrency: 'TIBAR',
+        fromCurrency: CurrencyEnum.OuroReal,
+        toCurrency: CurrencyEnum.Tibar,
         rate: 123.45,
         lastUpdated: '2025-06-19T16:09:55.000Z',
       },
       {
         id: '2',
-        fromCurrency: 'TIBAR',
-        toCurrency: 'OURO_REAL',
+        fromCurrency: CurrencyEnum.Tibar,
+        toCurrency: CurrencyEnum.OuroReal,
         rate: 123.45,
         lastUpdated: '2025-06-19T16:09:55.000Z',
       },
@@ -56,8 +57,8 @@ describe('CurrencyRateService', () => {
   it('patch() deve atualizar uma taxa', fakeAsync(() => {
     const fakefakeCurrencyRate: CurrencyRateInterface = {
       id: '1',
-      fromCurrency: 'OURO_REAL',
-      toCurrency: 'TIBAR',
+      fromCurrency: CurrencyEnum.OuroReal,
+      toCurrency: CurrencyEnum.Tibar,
       rate: 123.45,
       lastUpdated: '2025-06-19T16:09:55.000Z',
     };
@@ -92,8 +93,8 @@ describe('CurrencyRateService', () => {
   it('put() deve editar uma taxa', fakeAsync(() => {
     const fakefakeCurrencyRate: CurrencyRateInterface = {
       id: '1',
-      fromCurrency: 'OURO_REAL',
-      toCurrency: 'TIBAR',
+      fromCurrency: CurrencyEnum.OuroReal,
+      toCurrency: CurrencyEnum.Tibar,
       rate: 123.45,
       lastUpdated: '2025-06-19T16:09:55.000Z',
     };
@@ -123,8 +124,8 @@ describe('CurrencyRateService', () => {
   it('getById() deve retornar uma taxa', fakeAsync(() => {
     const fakefakeCurrencyRate: CurrencyRateInterface = {
       id: '1',
-      fromCurrency: 'OURO_REAL',
-      toCurrency: 'TIBAR',
+      fromCurrency: CurrencyEnum.OuroReal,
+      toCurrency: CurrencyEnum.Tibar,
       rate: 123.45,
       lastUpdated: '2025-06-19T16:09:55.000Z',
     };
