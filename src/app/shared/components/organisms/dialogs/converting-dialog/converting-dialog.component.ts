@@ -12,6 +12,7 @@ import { CurrencyNameRatePipe } from '@shared/pipes/currency-name-rate/currency-
 import { MoneyPipe } from '@shared/pipes/money/money.pipe';
 import { TransactionsService } from '@shared/services/transactions/transactions.service';
 import { getExchangeRate } from '@shared/utils/calculate.utils';
+import { formatDateToISO } from '@shared/utils/date.util';
 import { MessageService } from 'primeng/api';
 import { ButtonModule } from 'primeng/button';
 import { DynamicDialogConfig, DynamicDialogRef } from 'primeng/dynamicdialog';
@@ -75,6 +76,7 @@ export class ConvertingDialogComponent implements OnInit {
       toAmount: this.toAmount(),
       exchangeRate: this.exchangeRate(),
       timestamp: new Date().toISOString(),
+      date: formatDateToISO(new Date()),
       status: 'COMPLETED',
     };
 

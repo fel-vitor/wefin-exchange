@@ -10,6 +10,7 @@ export interface TransactionInterface {
   toAmount: number;
   exchangeRate: number;
   timestamp: string;
+  date: string;
   status: TransactionType;
 }
 

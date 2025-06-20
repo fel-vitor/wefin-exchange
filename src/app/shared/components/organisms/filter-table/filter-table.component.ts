@@ -9,6 +9,7 @@ import {
 import { FormsModule } from '@angular/forms';
 import type { Params } from '@angular/router';
 import { currencyList } from '@shared/constants/currency-label.constant';
+import { formatDateToISO } from '@shared/utils/date.util';
 import { ButtonModule } from 'primeng/button';
 import { DatePickerModule } from 'primeng/datepicker';
 import { InputNumberModule } from 'primeng/inputnumber';
@@ -41,11 +42,11 @@ export class FilterTableComponent {
   protected currentTypeList = signal(currencyList);
 
   protected filters = computed(() => {
-    const date = this.filterDate();
+    const date = formatDateToISO(this.filterDate());
     const raw = {
       id: this.idFilter(),
       exchangeRate: this.filterTax(),
-      timestamp: date ? date.toISOString() : undefined,
+      date: date ? date : undefined,
       fromCurrency: this.filterCurrencyFrom(),
       toCurrency: this.filterCurrencyTo(),
     };
