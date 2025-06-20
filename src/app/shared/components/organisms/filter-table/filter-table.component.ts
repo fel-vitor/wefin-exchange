@@ -9,6 +9,7 @@ import {
 import { FormsModule } from '@angular/forms';
 import type { Params } from '@angular/router';
 import { currencyList } from '@shared/constants/currency-label.constant';
+import { ButtonModule } from 'primeng/button';
 import { DatePickerModule } from 'primeng/datepicker';
 import { InputNumberModule } from 'primeng/inputnumber';
 import { InputTextModule } from 'primeng/inputtext';
@@ -22,6 +23,7 @@ import { SelectModule } from 'primeng/select';
     InputNumberModule,
     DatePickerModule,
     SelectModule,
+    ButtonModule,
   ],
   templateUrl: './filter-table.component.html',
   styleUrl: './filter-table.component.scss',
@@ -60,5 +62,13 @@ export class FilterTableComponent {
       const filters = this.filters();
       this.changeFilter.emit(filters);
     });
+  }
+
+  public clearFilters() {
+    this.idFilter.set('');
+    this.filterTax.set(undefined);
+    this.filterDate.set(undefined);
+    this.filterCurrencyFrom.set(undefined);
+    this.filterCurrencyTo.set(undefined);
   }
 }
