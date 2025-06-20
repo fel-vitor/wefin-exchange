@@ -1,0 +1,16 @@
+<div class="flex flex-column flex-col gap-2">
+    <label [attr.for]="inputId()">{{ label() }}</label>
+    <p-select
+      [attr.id]="inputId()"
+      [inputId]="inputId()"
+      [options]="options()"
+      [formControl]="control"
+      [optionLabel]="optionLabel()"
+      [optionValue]="optionValue()"
+      [attr.aria-describedby]="inputIdHelp()"
+      [readonly]="isReadOnly()"
+    />
+    @if (textHelp()) {
+      <small [attr.id]="inputIdHelp()">{{ textHelp() }}</small>
+    }
+</div>
