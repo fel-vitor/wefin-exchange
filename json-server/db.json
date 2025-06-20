@@ -4,15 +4,15 @@
       "id": "1",
       "fromCurrency": "OURO_REAL",
       "toCurrency": "TIBAR",
-      "rate": 1,
-      "lastUpdated": "Thu Jun 19 2025 23:47:46 GMT-0300 (Horário Padrão de Brasília)"
+      "rate": 3.1,
+      "lastUpdated": "Fri Jun 20 2025 09:55:56 GMT-0300 (Horário Padrão de Brasília)"
     },
     {
       "id": "2",
       "fromCurrency": "TIBAR",
       "toCurrency": "OURO_REAL",
-      "rate": 3.1,
-      "lastUpdated": "Thu Jun 19 2025 23:46:30 GMT-0300 (Horário Padrão de Brasília)"
+      "rate": 3.11,
+      "lastUpdated": "Fri Jun 20 2025 09:54:26 GMT-0300 (Horário Padrão de Brasília)"
     }
   ]
 }
