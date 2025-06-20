@@ -4,18 +4,31 @@
       "id": "1",
       "fromCurrency": "OURO_REAL",
       "toCurrency": "TIBAR",
-      "rate": 3.1,
-      "lastUpdated": "Fri Jun 20 2025 09:55:56 GMT-0300 (Horário Padrão de Brasília)"
-    },
-    {
-      "id": "2",
-      "fromCurrency": "TIBAR",
-      "toCurrency": "OURO_REAL",
-      "rate": 3.11,
-      "lastUpdated": "Fri Jun 20 2025 09:54:26 GMT-0300 (Horário Padrão de Brasília)"
+      "rate": 2.5,
+      "lastUpdated": "Fri Jun 20 2025 14:13:20 GMT-0300 (Horário Padrão de Brasília)"
     }
   ],
   "transactions": [
+    {
+      "id": "b72a",
+      "fromCurrency": "OURO_REAL",
+      "toCurrency": "TIBAR",
+      "fromAmount": 10,
+      "toAmount": 25,
+      "exchangeRate": 2.5,
+      "timestamp": "2025-06-20T17:19:45.291Z",
+      "status": "COMPLETED"
+    },
+    {
+      "id": "f695",
+      "fromCurrency": "OURO_REAL",
+      "toCurrency": "TIBAR",
+      "fromAmount": 100,
+      "toAmount": 250,
+      "exchangeRate": 2.5,
+      "timestamp": "2025-06-20T17:20:44.455Z",
+      "status": "COMPLETED"
+    },
     {
       "id": "TXN-001",
       "fromCurrency": "OURO_REAL",
@@ -64,6 +77,26 @@
       "toAmount": 187.5,
       "exchangeRate": 2.5,
       "timestamp": "2024-06-16T11:30:00Z",
+      "status": "COMPLETED"
+    },
+    {
+      "id": "9bf2",
+      "fromCurrency": "OURO_REAL",
+      "toCurrency": "TIBAR",
+      "fromAmount": 1,
+      "toAmount": 2.5,
+      "exchangeRate": 2.5,
+      "timestamp": "2025-06-20T17:36:11.628Z",
+      "status": "COMPLETED"
+    },
+    {
+      "id": "7444",
+      "fromCurrency": "OURO_REAL",
+      "toCurrency": "TIBAR",
+      "fromAmount": 100,
+      "toAmount": 250,
+      "exchangeRate": 2.5,
+      "timestamp": "2025-06-20T17:36:59.008Z",
       "status": "COMPLETED"
     }
   ]

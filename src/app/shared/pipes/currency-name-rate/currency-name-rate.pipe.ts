@@ -1,16 +1,13 @@
 import { Pipe, type PipeTransform } from '@angular/core';
-import type { CurrencyType } from '@shared/interfaces/currency.model';
+import { currencyLabel } from '@shared/constants/currency-label.constant';
+import type { CurrencyEnum } from '@shared/enum/currency-type.enum';
 
 @Pipe({
   name: 'currencyNameRate',
+  standalone: true,
 })
 export class CurrencyNameRatePipe implements PipeTransform {
-  transform(value: CurrencyType): string {
-    const names: Record<CurrencyType, string> = {
-      OURO_REAL: 'Ouro Real',
-      TIBAR: 'Tibar',
-    };
-
-    return names[value] ?? value;
+  transform(value: CurrencyEnum): string {
+    return currencyLabel[value] ?? value;
   }
 }

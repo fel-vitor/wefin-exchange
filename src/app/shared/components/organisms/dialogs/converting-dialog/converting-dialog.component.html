@@ -1,0 +1,45 @@
+<wefin-dialog-content>
+  <div content class="flex flex-column gap-3">
+    <div class="text-center mb-4">
+      <i class="pi pi-check-circle text-green-500" style="font-size: 3rem;"></i>
+    </div>
+    <div class="flex flex-row gap-2">
+      <div class="w-6 text-center flex flex-column">
+        <div class="text-muted text-sm">Você está convertendo</div>
+        <div class="text-2xl font-bold text-primary">
+          {{ transaction().fromAmount | wefinMoney: transaction().fromCurrency }}
+        </div>
+        <div class="text-muted">{{ transaction().fromCurrency | currencyNameRate }}</div>
+      </div>
+
+      <div class="w-6 text-center flex flex-column">
+        <div class="text-muted text-sm">Você receberá</div>
+        <div class="text-2xl font-bold text-primary">
+          {{ toAmount() | wefinMoney: transaction().toCurrency }}
+        </div>
+        <div class="text-muted">{{ transaction().toCurrency | currencyNameRate }}</div>
+      </div>
+    </div>
+    <div class="text-center mt-3 p-3 surface-100 border-round">
+      <div class="text-sm text-muted">Taxa de Câmbio</div>
+      <div class="font-semibold">
+        {{ 1 | wefinMoney: transaction().fromCurrency }} = {{ exchangeRate() | wefinMoney: transaction().toCurrency }}
+      </div>
+    </div>
+  </div>
+  <div footer class="flex justify-content-end gap-3">
+    <button
+      pButton 
+      label="Cancelar" 
+      [text]="true"
+      [loading]="loadingRequest()"
+      (click)="closeDialog()"
+    ></button>
+    <button 
+      pButton
+      label="Confirmar Transação"
+      [loading]="loadingRequest()" 
+      (click)="confirm()"
+    ></button>
+  </div>
+</wefin-dialog-content>

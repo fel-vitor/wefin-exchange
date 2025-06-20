@@ -1,4 +1,5 @@
-import { CurrencyType } from '@shared/interfaces/currency.model';
+import { currencyLabel } from '@shared/constants/currency-label.constant';
+import { CurrencyEnum } from '@shared/enum/currency-type.enum';
 import { CurrencyNameRatePipe } from './currency-name-rate.pipe';
 
 describe('CurrencyNameRatePipe', () => {
@@ -8,18 +9,22 @@ describe('CurrencyNameRatePipe', () => {
     pipe = new CurrencyNameRatePipe();
   });
 
-  it('Deve retornar "Ouro Real" quando o valor for "OURO_REAL"', () => {
-    const result = pipe.transform('OURO_REAL' as CurrencyType);
-    expect(result).toBe('Ouro Real');
+  it('Deve ser criado corretamente', () => {
+    expect(pipe).toBeTruthy();
   });
 
-  it('Deve retornar "Tibar" quando o valor for "TIBAR"', () => {
-    const result = pipe.transform('TIBAR' as CurrencyType);
-    expect(result).toBe('Tibar');
+  it('Deve retornar o label correto para OURO_REAL', () => {
+    const result = pipe.transform(CurrencyEnum.OuroReal);
+    expect(result).toBe(currencyLabel[CurrencyEnum.OuroReal]);
   });
 
-  it('Deve retornar o próprio valor quando não existir na lista', () => {
-    const result = pipe.transform('INVALIDO' as CurrencyType);
+  it('Deve retornar o label correto para TIBAR', () => {
+    const result = pipe.transform(CurrencyEnum.Tibar);
+    expect(result).toBe(currencyLabel[CurrencyEnum.Tibar]);
+  });
+
+  it('Deve retornar o próprio valor se não encontrar no mapeamento', () => {
+    const result = pipe.transform('INVALIDO' as CurrencyEnum);
     expect(result).toBe('INVALIDO');
   });
 });
