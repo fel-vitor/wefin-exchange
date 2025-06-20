@@ -1,0 +1,16 @@
+<div class="flex flex-column gap-2">
+  <label [attr.for]="inputId()">{{ label() }}</label>
+  <input
+    pInputText
+    type="number"
+    [attr.id]="inputId()"
+    [attr.aria-describedby]="inputIdHelp()"
+    [attr.min]="min() ?? null"
+    [attr.max]="max() ?? null"
+    [formControl]="control"
+    [readOnly]="isReadOnly()"
+  />
+  @if (textHelp()) {
+    <small [attr.id]="inputIdHelp()">{{ textHelp() }}</small>
+  }
+</div>
