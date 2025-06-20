@@ -4,7 +4,7 @@ import {
   provideHttpClientTesting,
 } from '@angular/common/http/testing';
 import { fakeAsync, TestBed, tick } from '@angular/core/testing';
-import { CurrencyRateInterface } from '@shared/interfaces/currency.model';
+import type { CurrencyRateInterface } from '@shared/interfaces/currency.model';
 import { CurrencyRateService } from './currency-rate.service';
 
 describe('CurrencyRateService', () => {
@@ -35,14 +35,14 @@ describe('CurrencyRateService', () => {
         fromCurrency: 'OURO_REAL',
         toCurrency: 'TIBAR',
         rate: 123.45,
-        lastUpdated: `${new Date()}`,
+        lastUpdated: '2025-06-19T16:09:55.000Z',
       },
       {
         id: '2',
         fromCurrency: 'TIBAR',
         toCurrency: 'OURO_REAL',
         rate: 123.45,
-        lastUpdated: `${new Date()}`,
+        lastUpdated: '2025-06-19T16:09:55.000Z',
       },
     ];
 
