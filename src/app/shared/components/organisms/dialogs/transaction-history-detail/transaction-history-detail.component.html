@@ -1,0 +1,32 @@
+<h3 class="transaction-detail__id">{{transaction.id}}</h3>
+
+<div class="transaction-detail__card_list">
+  <section class="transaction-detail__card">
+    <p class="transaction-detail__card-title">
+      <span class="mr-1"><i class="pi pi-arrow-up"></i></span>
+      Valor Enviado
+    </p>
+    <p class="transaction-detail__card-value">{{transaction.fromAmount| wefinMoney: transaction.fromCurrency }}</p>
+    <p class="transaction-detail__card-label">{{transaction.fromCurrency| currencyNameRate }}</p>
+
+  </section>
+  <section class="transaction-detail__card">
+    <p class="transaction-detail__card-title">
+      <span class="mr-1"><i class="pi pi-arrow-down"></i></span>
+      Valor Recebido
+    </p>
+    <p class="transaction-detail__card-value">{{transaction.toAmount| wefinMoney: transaction.toCurrency }}</p>
+    <p class="transaction-detail__card-label">{{transaction.toCurrency| currencyNameRate }}</p>
+  </section>
+
+  <section class="transaction-detail__infor">
+    <p class="title-infor">TAXA DE CAMBIO</p>
+    <p class="mt-1">{{transaction.exchangeRate}}</p>
+  </section>
+
+  <section class="transaction-detail__infor">
+    <p class="title-infor">DATA/HORA</p>
+    <p class="mt-1">{{transaction.timestamp | date:'dd/MM/yy HH:mm:ss'}}</p>
+  </section>
+
+</div>

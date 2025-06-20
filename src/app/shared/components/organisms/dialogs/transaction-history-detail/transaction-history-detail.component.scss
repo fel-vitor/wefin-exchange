@@ -1,0 +1,62 @@
+:host {
+  display: block;
+  width: 500px;
+  max-width: 100%;
+}
+
+.transaction-detail__id {
+  color: rgb(17, 187, 17);
+  text-align: center;
+}
+
+.transaction-detail__card_list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
+
+.transaction-detail__card {
+  padding: 16px;
+  border-radius: 4px;
+  border: 1px solid #c1c1c1;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.transaction-detail__card-title {
+  font-weight: 500;
+  font-size: 16px;
+
+  i {
+    font-size: 14px;
+  }
+}
+
+.transaction-detail__card-value {
+  font-size: 18px;
+  font-weight: 700;
+  padding-top: 16px;
+}
+
+.transaction-detail__card-label {
+  font-size: 14px;
+}
+
+.transaction-detail__infor {
+  font-size: 14px;
+}
+
+.title-infor {
+  font-weight: 500;
+}
+
+.pi-arrow-up {
+  color: red;
+}
+
+.pi-arrow-down {
+  color: rgb(17, 187, 17);
+}
