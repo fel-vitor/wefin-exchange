@@ -1,5 +1,5 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
-import { HeaderComponent } from '@shared/components/organisms/header/header.component';
+import type { HeaderComponent } from '@shared/components/organisms/header/header.component';
 
 @Component({
   selector: 'wefin-header',

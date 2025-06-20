@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
-import { inject, Injectable } from '@angular/core';
-import { CurrencyRateInterface } from '@shared/interfaces/currency.model';
+import { Injectable, inject } from '@angular/core';
+import type { CurrencyRateInterface } from '@shared/interfaces/currency.model';
 
 @Injectable({
   providedIn: 'root',

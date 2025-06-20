@@ -1,0 +1,44 @@
+<wefin-dialog-content>
+  <div content class="flex flex-column gap-3">
+    <div class="flex flex-row gap-2">
+      <wefin-input-text
+        class="w-full"
+        inputId="fromCurrency"
+        label="De"
+        [disabled]="true"
+        [ngModel]="currencyRate().fromCurrency | currencyNameRate"
+      />
+
+      <wefin-input-text
+        class="w-full"
+        inputId="toCurrency"
+        label="Para"
+        [disabled]="true"
+        [ngModel]="currencyRate().toCurrency | currencyNameRate"
+      />
+    </div>
+
+    <wefin-input-number
+      class="w-full"
+      inputId="rate"
+      label="Nova Taxa"
+      [min]="0"
+      [formControl]="reteControl"
+    />
+  </div>
+  <div footer class="flex justify-content-end gap-3">
+    <button
+      pButton 
+      label="Cancelar" 
+      [text]="true"
+      [loading]="loadingRequest()"
+      (click)="closeDialog()"
+    ></button>
+    <button 
+      pButton
+      label="Confirmar Transação"
+      [loading]="loadingRequest()" 
+      (click)="confirm()"
+    ></button>
+  </div>
+</wefin-dialog-content>

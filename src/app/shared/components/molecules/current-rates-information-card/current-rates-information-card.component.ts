@@ -5,7 +5,7 @@ import {
   input,
   output,
 } from '@angular/core';
-import { CurrencyRateInterface } from '@shared/interfaces/currency.model';
+import type { CurrencyRateInterface } from '@shared/interfaces/currency.model';
 import { CurrencyNameRatePipe } from '@shared/pipes/currency-name-rate/currency-name-rate.pipe';
 import { ButtonModule } from 'primeng/button';
 import { TooltipModule } from 'primeng/tooltip';

@@ -1,5 +1,5 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
-import { LayoutComponent } from '@core/layout/layout.component';
+import type { LayoutComponent } from '@core/layout/layout.component';
 
 @Component({
   selector: 'wefin-layout',

@@ -2,17 +2,17 @@ import { provideHttpClient } from '@angular/common/http';
 import { provideHttpClientTesting } from '@angular/common/http/testing';
 import { type ComponentFixture, TestBed } from '@angular/core/testing';
 import { TestHelper } from '@testing/helpers/test-helper';
-import { FakeHomeComponent } from '@testing/mocks/fake-home.component';
+import { FakeHomeTemplateComponent } from '@testing/mocks/fake-home-template.component';
 import { DialogService } from 'primeng/dynamicdialog';
-import { HomeComponent } from './home.component';
+import { HomeTemplateComponent } from './home-template.component';
 
-describe('HomeComponent', () => {
-  let fixture: ComponentFixture<HomeComponent>;
-  let testHelper: TestHelper<HomeComponent>;
+describe('HomeTemplateComponent', () => {
+  let fixture: ComponentFixture<HomeTemplateComponent>;
+  let testHelper: TestHelper<HomeTemplateComponent>;
 
   beforeEach(async () => {
     TestBed.configureTestingModule({
-      imports: [HomeComponent],
+      imports: [HomeTemplateComponent],
       providers: [
         provideHttpClient(),
         provideHttpClientTesting(),
@@ -22,22 +22,22 @@ describe('HomeComponent', () => {
 
     await TestBed.compileComponents();
 
-    TestBed.overrideComponent(HomeComponent, {
+    TestBed.overrideComponent(HomeTemplateComponent, {
       remove: {
-        imports: [HomeComponent],
+        imports: [HomeTemplateComponent],
       },
       add: {
-        imports: [FakeHomeComponent],
+        imports: [FakeHomeTemplateComponent],
       },
     });
 
-    fixture = TestBed.createComponent(HomeComponent);
+    fixture = TestBed.createComponent(HomeTemplateComponent);
     testHelper = new TestHelper(fixture);
 
     fixture.detectChanges();
   });
 
-  it('Deve renderizar o home-template', () => {
-    testHelper.checkComponentExistence('wefin-home-template');
+  it('Deve renderizar o componente current-rates-display', () => {
+    testHelper.checkComponentExistence('wefin-current-rates-display');
   });
 });

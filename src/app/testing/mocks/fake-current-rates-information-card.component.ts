@@ -4,8 +4,8 @@ import {
   input,
   output,
 } from '@angular/core';
-import { CurrentRatesInformationCardComponent } from '@shared/components/molecules/current-rates-information-card/current-rates-information-card.component';
-import { CurrencyRateInterface } from '@shared/interfaces/currency.model';
+import type { CurrentRatesInformationCardComponent } from '@shared/components/molecules/current-rates-information-card/current-rates-information-card.component';
+import type { CurrencyRateInterface } from '@shared/interfaces/currency.model';
 
 @Component({
   selector: 'wefin-current-rates-information-card',
