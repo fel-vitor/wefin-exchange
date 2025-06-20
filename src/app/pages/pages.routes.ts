@@ -9,12 +9,14 @@ export const PAGES_ROUTES: Routes = [
       {
         path: '',
         loadComponent: () =>
-          import('./home/home.component').then((m) => m.HomeComponent),
+          import('./home/home.component').then((c) => c.HomeComponent),
       },
       {
         path: 'historico',
         loadComponent: () =>
-          import('./home/home.component').then((m) => m.HomeComponent),
+          import('./transaction-history/transaction-history.component').then(
+            (c) => c.TransactionHistoryComponent
+          ),
       },
     ],
   },

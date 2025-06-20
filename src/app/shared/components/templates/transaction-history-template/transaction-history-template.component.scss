@@ -1,0 +1,28 @@
+:host {
+  display: block;
+}
+
+td,
+th {
+  white-space: nowrap;
+  font-size: 14px;
+}
+
+.text-convert-value {
+  color: rgb(17, 187, 17);
+}
+
+.transaction-history__button-detail {
+  border: none;
+  border-radius: 4px;
+  color: rgb(17, 187, 17);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  background-color: transparent;
+
+  &:hover {
+    background-color: #f4f4f4;
+  }
+}

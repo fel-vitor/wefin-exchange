@@ -1,5 +1,5 @@
-import { Pipe, PipeTransform } from '@angular/core';
-import { CurrencyType } from '@shared/interfaces/currency.model';
+import { Pipe, type PipeTransform } from '@angular/core';
+import type { CurrencyType } from '@shared/interfaces/currency.model';
 
 @Pipe({
   name: 'currencyNameRate',

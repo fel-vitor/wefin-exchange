@@ -14,5 +14,57 @@
       "rate": 3.11,
       "lastUpdated": "Fri Jun 20 2025 09:54:26 GMT-0300 (Horário Padrão de Brasília)"
     }
+  ],
+  "transactions": [
+    {
+      "id": "TXN-001",
+      "fromCurrency": "OURO_REAL",
+      "toCurrency": "TIBAR",
+      "fromAmount": 100,
+      "toAmount": 250,
+      "exchangeRate": 2.5,
+      "timestamp": "2024-06-18T09:30:00Z",
+      "status": "COMPLETED"
+    },
+    {
+      "id": "TXN-002",
+      "fromCurrency": "TIBAR",
+      "toCurrency": "OURO_REAL",
+      "fromAmount": 500,
+      "toAmount": 200,
+      "exchangeRate": 0.4,
+      "timestamp": "2024-06-18T08:15:00Z",
+      "status": "COMPLETED"
+    },
+    {
+      "id": "TXN-003",
+      "fromCurrency": "OURO_REAL",
+      "toCurrency": "TIBAR",
+      "fromAmount": 50,
+      "toAmount": 125,
+      "exchangeRate": 2.5,
+      "timestamp": "2024-06-17T16:45:00Z",
+      "status": "COMPLETED"
+    },
+    {
+      "id": "TXN-004",
+      "fromCurrency": "TIBAR",
+      "toCurrency": "OURO_REAL",
+      "fromAmount": 1000,
+      "toAmount": 400,
+      "exchangeRate": 0.4,
+      "timestamp": "2024-06-17T14:20:00Z",
+      "status": "COMPLETED"
+    },
+    {
+      "id": "TXN-005",
+      "fromCurrency": "OURO_REAL",
+      "toCurrency": "TIBAR",
+      "fromAmount": 75,
+      "toAmount": 187.5,
+      "exchangeRate": 2.5,
+      "timestamp": "2024-06-16T11:30:00Z",
+      "status": "COMPLETED"
+    }
   ]
 }
