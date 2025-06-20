@@ -8,7 +8,6 @@ describe('CurrentRatesDisplayComponent', () => {
 
   beforeEach(async () => {
     setupDefaultProviders();
-
     await TestBed.configureTestingModule({
       imports: [CurrentRatesDisplayComponent],
     }).compileComponents();
@@ -18,7 +17,7 @@ describe('CurrentRatesDisplayComponent', () => {
     fixture.detectChanges();
   });
 
-  it('Deve ser criado corretamente', () => {
+  it('should create', () => {
     expect(component).toBeTruthy();
   });
 });

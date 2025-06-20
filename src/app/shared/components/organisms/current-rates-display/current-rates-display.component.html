@@ -1,4 +1,4 @@
-<p-card header="Taxas Atuais" class="mb-4">
+<p-card header="Taxas Atuais">
   <div class="flex flex-column">
     <div class="md:flex-row flex-column flex gap-3 w-full">
       @if(isLoading()) {
@@ -18,5 +18,43 @@
         }
       }
     </div>
+  </div>
+</p-card>
+<p-card header="Realizar Conversão" styleClass="mt-4 mb-5">
+  <div [formGroup]="model" class="flex flex-column gap-2">
+    <div class="flex gap-2">
+      <wefin-input-select
+        inputId="fromCurrency"
+        label="Moeda de Origem"
+        [options]="currencyOptions()"
+        optionLabel="label"
+        formControlName="fromCurrency"
+        class="w-full"
+      />
+  
+      <wefin-input-select
+        inputId="toCurrency"
+        label="Moeda de Destino"
+        [options]="currencyOptions()"
+        optionLabel="label"
+        formControlName="toCurrency"
+        class="w-full"
+      />
+    </div>
+    <wefin-input-number
+      inputId="fromCurrency"
+      label="Valor a Converter"
+      formControlName="fromAmount"
+      class="w-full"
+      [min]="0"
+    />
+
+    <button
+      pButton
+      label="Converter" 
+      icon="pi pi-calculator" 
+      class="mt-3"
+      (click)="onSubmit()"
+    ></button>
   </div>
 </p-card>
