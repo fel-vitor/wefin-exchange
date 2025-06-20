@@ -12,7 +12,7 @@ import { TransactionHistoryDetailComponent } from '@shared/components/organisms/
 import { FilterTableComponent } from '@shared/components/organisms/filter-table/filter-table.component';
 import type { TransactionInterface } from '@shared/interfaces/transaction.model';
 import { CurrencyNameRatePipe } from '@shared/pipes/currency-name-rate/currency-name-rate.pipe';
-import { MoneyPipe } from '@shared/pipes/currency-name-rate/money.pipe';
+import { MoneyPipe } from '@shared/pipes/money/money.pipe';
 import { DialogService } from 'primeng/dynamicdialog';
 import { TableModule } from 'primeng/table';
 

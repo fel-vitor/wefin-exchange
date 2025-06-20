@@ -2,7 +2,7 @@ import { DatePipe } from '@angular/common';
 import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import type { TransactionInterface } from '@shared/interfaces/transaction.model';
 import { CurrencyNameRatePipe } from '@shared/pipes/currency-name-rate/currency-name-rate.pipe';
-import { MoneyPipe } from '@shared/pipes/currency-name-rate/money.pipe';
+import { MoneyPipe } from '@shared/pipes/money/money.pipe';
 import { DynamicDialogConfig, DynamicDialogRef } from 'primeng/dynamicdialog';
 
 @Component({

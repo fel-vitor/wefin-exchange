@@ -26,15 +26,4 @@ export class TransactionsService {
   post(payload: TransactionWithoutIdInterface) {
     return this._http.post<TransactionInterface>(`${this.baseURI}/`, payload);
   }
-
-  private addLikeJsonServer(filters?: Params): Params {
-    if (!filters) return {};
-
-    return Object.entries(filters).reduce((acc, [key, value]) => {
-      if (value !== undefined && value !== null && value !== '') {
-        acc[`${key}_like`] = value;
-      }
-      return acc;
-    }, {} as Record<string, any>);
-  }
 }
