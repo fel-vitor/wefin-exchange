@@ -1,7 +1,8 @@
 import { DatePipe } from '@angular/common';
 import { LOCALE_ID } from '@angular/core';
-import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { CurrencyRateInterface } from '@shared/interfaces/currency.model';
+import { type ComponentFixture, TestBed } from '@angular/core/testing';
+import { CurrencyEnum } from '@shared/enum/currency-type.enum';
+import type { CurrencyRateInterface } from '@shared/interfaces/currency.model';
 import { TestHelper } from '@testing/helpers/test-helper';
 import { FakeCurrentRatesInformationCardComponent } from '@testing/mocks/fake-current-rates-information-card.component';
 import { CurrentRatesInformationCardComponent } from './current-rates-information-card.component';
@@ -12,8 +13,8 @@ describe('CurrentRatesInformationCardComponent', () => {
 
   const fakeMock: CurrencyRateInterface = {
     id: '1',
-    fromCurrency: 'OURO_REAL',
-    toCurrency: 'TIBAR',
+    fromCurrency: CurrencyEnum.OuroReal,
+    toCurrency: CurrencyEnum.Tibar,
     rate: 123.45,
     lastUpdated: '2025-06-19T16:09:55.000Z',
   };

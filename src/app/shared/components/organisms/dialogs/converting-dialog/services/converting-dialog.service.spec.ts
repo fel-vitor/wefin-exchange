@@ -1,4 +1,5 @@
 import { TestBed } from '@angular/core/testing';
+import { CurrencyEnum } from '@shared/enum/currency-type.enum';
 import type { CurrencyRateInterface } from '@shared/interfaces/currency.model';
 import type {
   TransactionInterface,
@@ -36,8 +37,8 @@ describe('ConvertingDialogService', () => {
 
   it('Deve abrir o dialog corretamente', () => {
     const mockTransaction: TransactionWithoutIdInterface = {
-      fromCurrency: 'OURO_REAL',
-      toCurrency: 'TIBAR',
+      fromCurrency: CurrencyEnum.OuroReal,
+      toCurrency: CurrencyEnum.Tibar,
       fromAmount: 100,
       toAmount: 250,
       exchangeRate: 2.5,
@@ -47,8 +48,8 @@ describe('ConvertingDialogService', () => {
 
     const mockCurrencyRate: CurrencyRateInterface = {
       id: '1',
-      fromCurrency: 'OURO_REAL',
-      toCurrency: 'TIBAR',
+      fromCurrency: CurrencyEnum.OuroReal,
+      toCurrency: CurrencyEnum.Tibar,
       rate: 2.5,
       lastUpdated: '2025-06-20T00:00:00Z',
     };
