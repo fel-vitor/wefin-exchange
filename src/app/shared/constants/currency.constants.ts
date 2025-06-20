@@ -1,6 +1,6 @@
-import type { CurrencyType } from '@shared/interfaces/currency.model';
+import type { CurrencyEnum } from '@shared/enum/currency-type.enum';
 
-export const CURRENCY_NAMES: Record<CurrencyType, string> = {
+export const CURRENCY_NAMES: Record<CurrencyEnum, string> = {
   OURO_REAL: 'Ouro Real',
   TIBAR: 'Tibar',
 };

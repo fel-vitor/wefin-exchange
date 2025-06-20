@@ -1,11 +1,11 @@
-import type { CurrencyType } from './currency.model';
+import type { CurrencyEnum } from '@shared/enum/currency-type.enum';
 
 export type TransactionType = 'PENDING' | 'COMPLETED' | 'FAILED' | 'CANCELLED';
 
 export interface TransactionInterface {
   id: string;
-  fromCurrency: CurrencyType;
-  toCurrency: CurrencyType;
+  fromCurrency: CurrencyEnum;
+  toCurrency: CurrencyEnum;
   fromAmount: number;
   toAmount: number;
   exchangeRate: number;

@@ -14,7 +14,7 @@ import {
 import { InputNumberComponent } from '@shared/components/atoms/input-number/input-number.component';
 import { InputSelectComponent } from '@shared/components/atoms/input-select/input-select.component';
 import { CurrentRatesInformationCardComponent } from '@shared/components/molecules/current-rates-information-card/current-rates-information-card.component';
-import { CURRENCY_OPTIONS } from '@shared/const/currency.constants';
+import { CURRENCY_OPTIONS } from '@shared/constants/currency.constants';
 import { BaseFormDirective } from '@shared/directives/base-form/base-form.directive';
 import { notEqualValidator } from '@shared/helpers/validators';
 import type { CurrencyRateInterface } from '@shared/interfaces/currency.model';

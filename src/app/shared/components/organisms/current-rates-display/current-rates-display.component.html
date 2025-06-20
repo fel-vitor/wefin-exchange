@@ -5,9 +5,6 @@
         <div class="w-full">
           <p-skeleton data-testid="current-rates-information-skeleton" width="100%" height="128px" />
          </div>
-        <div class="w-full">
-          <p-skeleton data-testid="current-rates-information-skeleton" width="100%" height="128px" />
-        </div>
       } @else {
        @for(currencyRate of currencyRateList(); track currencyRate.id) {
           <wefin-current-rates-information-card

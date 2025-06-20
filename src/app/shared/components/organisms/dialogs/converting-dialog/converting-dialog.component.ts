@@ -1,4 +1,3 @@
-import { DecimalPipe } from '@angular/common';
 import {
   ChangeDetectionStrategy,
   Component,
@@ -10,6 +9,7 @@ import { DialogContentComponent } from '@shared/components/molecules/dialog-cont
 import type { CurrencyRateInterface } from '@shared/interfaces/currency.model';
 import type { TransactionWithoutIdInterface } from '@shared/interfaces/transaction.model';
 import { CurrencyNameRatePipe } from '@shared/pipes/currency-name-rate/currency-name-rate.pipe';
+import { MoneyPipe } from '@shared/pipes/currency-name-rate/money.pipe';
 import { TransactionsService } from '@shared/services/transactions/transactions.service';
 import { getExchangeRate } from '@shared/utils/calculate.utils';
 import { MessageService } from 'primeng/api';
@@ -23,8 +23,8 @@ import { delay, finalize, first } from 'rxjs';
   imports: [
     DialogContentComponent,
     ButtonModule,
-    DecimalPipe,
     CurrencyNameRatePipe,
+    MoneyPipe,
   ],
   templateUrl: './converting-dialog.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush,

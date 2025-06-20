@@ -28,9 +28,7 @@
       "exchangeRate": 2.5,
       "timestamp": "2025-06-20T17:20:44.455Z",
       "status": "COMPLETED"
-    }
-  ],
-  "transactions": [
+    },
     {
       "id": "TXN-001",
       "fromCurrency": "OURO_REAL",
@@ -79,6 +77,26 @@
       "toAmount": 187.5,
       "exchangeRate": 2.5,
       "timestamp": "2024-06-16T11:30:00Z",
+      "status": "COMPLETED"
+    },
+    {
+      "id": "9bf2",
+      "fromCurrency": "OURO_REAL",
+      "toCurrency": "TIBAR",
+      "fromAmount": 1,
+      "toAmount": 2.5,
+      "exchangeRate": 2.5,
+      "timestamp": "2025-06-20T17:36:11.628Z",
+      "status": "COMPLETED"
+    },
+    {
+      "id": "7444",
+      "fromCurrency": "OURO_REAL",
+      "toCurrency": "TIBAR",
+      "fromAmount": 100,
+      "toAmount": 250,
+      "exchangeRate": 2.5,
+      "timestamp": "2025-06-20T17:36:59.008Z",
       "status": "COMPLETED"
     }
   ]

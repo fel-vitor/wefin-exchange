@@ -1,9 +1,9 @@
-export type CurrencyType = 'OURO_REAL' | 'TIBAR';
+import type { CurrencyEnum } from '@shared/enum/currency-type.enum';
 
 export interface CurrencyRateInterface {
   id: string;
-  fromCurrency: CurrencyType;
-  toCurrency: CurrencyType;
+  fromCurrency: CurrencyEnum;
+  toCurrency: CurrencyEnum;
   rate: number;
   lastUpdated: string;
 }
