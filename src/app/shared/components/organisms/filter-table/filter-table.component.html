@@ -1,0 +1,5 @@
+<input pInputText [(ngModel)]="idFilter" type="text" placeholder="Id" />
+<p-datepicker [(ngModel)]="filterDate" [showIcon]="true" inputId="date-range" [showOnFocus]="false" />
+<p-select [options]="currentTypeList()" [(ngModel)]="filterCurrencyFrom" optionLabel="label" placeholder="De" class="w-full md:w-56" optionValue="value" />
+<p-select [options]="currentTypeList()" [(ngModel)]="filterCurrencyTo" optionLabel="label" placeholder="Para" class="w-full md:w-56" optionValue="value" />
+<p-inputnumber [(ngModel)]="filterTax"  mode="decimal" size="small" placeholder="Taxa" />

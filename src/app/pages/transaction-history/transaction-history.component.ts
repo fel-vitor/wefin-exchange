@@ -2,9 +2,12 @@ import {
   ChangeDetectionStrategy,
   Component,
   inject,
+  type OnDestroy,
+  type OnInit,
   signal,
 } from '@angular/core';
 import { toSignal } from '@angular/core/rxjs-interop';
+import type { Params } from '@angular/router';
 import { TransactionHistoryTemplateComponent } from '@shared/components/templates/transaction-history-template/transaction-history-template.component';
 import type { TransactionInterface } from '@shared/interfaces/transaction.model';
 import { TransactionsService } from '@shared/services/transactions/transactions.service';
@@ -17,12 +20,14 @@ import { type Observable, ReplaySubject, switchMap } from 'rxjs';
   styleUrl: './transaction-history.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class TransactionHistoryComponent {
+export class TransactionHistoryComponent implements OnInit, OnDestroy {
   private transactionsService = inject(TransactionsService);
 
   protected data = signal<TransactionInterface[]>([]);
 
   private transactionSubject$ = new ReplaySubject<void>(1);
+
+  private filterParams = signal<Params | undefined>(undefined);
 
   protected dataAsync = toSignal(this.observableTransaction(), {
     initialValue: [],
@@ -30,20 +35,23 @@ export class TransactionHistoryComponent {
 
   ngOnInit(): void {
     this.transactionSubject$.next();
-    // this.transactionsService
-    //   .getAll()
-    //   .pipe(take(1))
-    //   .subscribe({
-    //     next: (response) => {
-    //       this.data.set(response);
-    //       console.log(response);
-    //     },
-    //   });
+  }
+
+  ngOnDestroy(): void {
+    this.transactionSubject$.next();
+    this.transactionSubject$.complete();
+  }
+
+  protected onChangeFilter(event: Params): void {
+    this.filterParams.set(event);
+    this.transactionSubject$.next();
   }
 
   private observableTransaction(): Observable<TransactionInterface[]> {
     return this.transactionSubject$
       .asObservable()
-      .pipe(switchMap(() => this.transactionsService.getAll()));
+      .pipe(
+        switchMap(() => this.transactionsService.getAll(this.filterParams()))
+      );
   }
 }

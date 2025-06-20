@@ -1,0 +1,7 @@
+:host {
+  display: grid;
+  background-color: #fff;
+  padding: 16px;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
